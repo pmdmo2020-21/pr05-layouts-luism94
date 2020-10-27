@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/main_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/header"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/main_film_image" />
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_filmTitle"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/main_img"
+        android:textSize="@dimen/titleSize"
+        android:textColor="@color/black"/>
+
+    <ImageView
+        android:id="@+id/main_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_bookmark"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/main_img"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:contentDescription="@string/main_bookmarkDescription" />
+
+    <TextView
+        android:id="@+id/main_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/main_title"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:text="@string/main_filmSubtitle" />
+
+    <View
+        android:id="@+id/main_divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/main_squareBtn_1"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"/>
+
+
+    <View
+        android:id="@+id/main_divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_below="@id/main_aux_2"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginStart="@dimen/margin"/>
+
+    <Button
+        android:id="@+id/main_squareBtn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_subtitle"
+        android:layout_alignStart="@id/main_subtitle"
+        android:layout_alignEnd="@id/main_aux_1"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:text="@string/main_squareBtn_1" />
+
+    <Button
+        android:id="@+id/main_squareBtn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_subtitle"
+        android:layout_alignEnd="@id/main_bookmark"
+        android:layout_alignStart="@id/main_aux_1"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/main_squareBtn_2" />
+
+    <View
+        android:id="@+id/main_aux_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/main_aux_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/main_aux_1"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/main_divider_1">
+
+        <View
+            android:id="@+id/main_aux_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/main_aux_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/main_aux_3"
+            android:layout_alignParentStart="true">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_roundBtn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_baseline_edit_24"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/margin"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:id="@+id/main_btnTitle_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_roundBtn_1"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/main_btnText_1" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main_aux_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/main_aux_4"
+            android:layout_alignParentEnd="true">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_roundBtn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin"
+                android:clickable="true"
+                app:tint="@color/white"
+                app:srcCompat="@drawable/ic_family" />
+
+            <TextView
+                android:id="@+id/main_btnTitle_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_roundBtn_2"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/main_btnText_2" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_aux_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/main_aux_1"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/main_divider_1">
+
+        <View
+            android:id="@+id/main_aux_7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="invisible"
+            android:layout_centerInParent="true" />
+
+        <RelativeLayout
+            android:id="@+id/main_aux_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/main_aux_7"
+            android:layout_alignParentStart="true">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_roundBtn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/tomato"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:id="@+id/main_btnTitle_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_roundBtn_3"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/main_btnText_3" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/main_aux_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/main_aux_8"
+            android:layout_alignParentEnd="true">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/main_roundBtn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_similar"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:id="@+id/main_btnTitle_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/main_roundBtn_4"
+                android:layout_marginTop="@dimen/margin"
+                android:text="@string/main_btnText_4" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/main_filmDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_filmDescription"
+        android:layout_below="@id/main_divider_2"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_alignStart="@id/main_divider_2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@id/main_divider_2"
+        android:textSize="@dimen/filmDescription"/>
+
+</RelativeLayout>
