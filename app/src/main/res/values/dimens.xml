@@ -2,4 +2,6 @@
 <resources>
     <dimen name="margin">8dp</dimen>
     <dimen name="margin_2x">16dp</dimen>
+    <dimen name="titleSize">23sp</dimen>
+    <dimen name="filmDescription">18sp</dimen>
 </resources>
